@@ -1,0 +1,66 @@
+/* ── HEADER ─────────────────────────────────────────── */
+.header {
+  position: relative;
+  height: 50px;
+  min-height: 50px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  z-index: 100;
+}
+
+.logo {
+  font-family: var(--display);
+  font-size: 22px;
+  letter-spacing: 7px;
+  color: var(--accent);
+  user-select: none;
+}
+
+.logo-sub {
+  color: var(--text-dim);
+  font-size: 9px;
+  letter-spacing: 3px;
+  font-family: var(--mono);
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.hdr-right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.live-pill {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--accent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.live-pill.on {
+  opacity: 1;
+}
+
+.live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+.clock {
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  color: var(--amber);
+  font-variant-numeric: tabular-nums;
+}

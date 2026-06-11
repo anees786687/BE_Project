@@ -1,0 +1,65 @@
+/* ═══════════════════════════════════════════════════════
+   VISOR — Camera Dashboard Design System
+   ═══════════════════════════════════════════════════════ */
+
+/* ── RESET ─────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── DESIGN TOKENS ─────────────────────────────────── */
+:root {
+  --bg:        #07090d;
+  --surface:   #0c1018;
+  --border:    #1a2535;
+  --accent:    #00e676;
+  --accent-lo: rgba(0, 230, 118, 0.07);
+  --amber:     #ffb300;
+  --red:       #ff1744;
+  --text:      #99b4cc;
+  --text-dim:  #334a60;
+  --text-hi:   #ddeeff;
+  --mono:      'Space Mono', monospace;
+  --display:   'Bebas Neue', cursive;
+}
+
+html, body, #root {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--mono);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── APP LAYOUT ────────────────────────────────────── */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+/* ── ANIMATIONS ────────────────────────────────────── */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.3; }
+}
+
+@keyframes step-blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scan-down {
+  from { transform: translateY(-100%); }
+  to   { transform: translateY(100vh); }
+}

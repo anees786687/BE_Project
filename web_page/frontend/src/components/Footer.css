@@ -1,0 +1,116 @@
+/* ── FOOTER ─────────────────────────────────────────── */
+.footer {
+  position: relative;
+  height: 54px;
+  min-height: 54px;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  z-index: 100;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+}
+
+/* ── Buttons ───────────────────────────────────────── */
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  height: 32px;
+  padding: 0 16px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+  white-space: nowrap;
+}
+
+.btn:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-lo);
+}
+
+.btn.go {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-lo);
+}
+
+.btn.go:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.btn.kill {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.btn.kill:hover:not(:disabled) {
+  background: rgba(255, 23, 68, 0.07);
+}
+
+.btn:disabled {
+  opacity: 0.28;
+  cursor: default;
+}
+
+/* ── Button icons ──────────────────────────────────── */
+.btn-icon {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.btn-icon.tri {
+  width: 0;
+  height: 0;
+  background: none;
+  border-radius: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 8px solid currentColor;
+}
+
+.btn-icon.square {
+  border-radius: 1px;
+}
+
+.btn-icon.cam {
+  width: 10px;
+  height: 8px;
+  border-radius: 1px;
+  position: relative;
+}
+
+/* ── Metadata bar ──────────────────────────────────── */
+.meta {
+  display: flex;
+  gap: 22px;
+}
+
+.meta-item {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+}
+
+.meta-val {
+  color: var(--text);
+  margin-left: 4px;
+  font-variant-numeric: tabular-nums;
+}

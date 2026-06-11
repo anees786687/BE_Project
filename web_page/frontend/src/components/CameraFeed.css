@@ -1,0 +1,170 @@
+/* ── FEED AREA ──────────────────────────────────────── */
+.feed-wrap {
+  position: relative;
+  flex: 1;
+  background: #000;
+  overflow: hidden;
+}
+
+.feed-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Scanline effect ───────────────────────────────── */
+.scanlines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 3px,
+    rgba(0, 0, 0, 0.06) 3px,
+    rgba(0, 0, 0, 0.06) 4px
+  );
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* ── No-signal screen ──────────────────────────────── */
+.no-signal {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  z-index: 4;
+  background: #030508;
+  animation: fade-in 0.4s ease-out;
+}
+
+.ns-icon {
+  width: 56px;
+  height: 56px;
+  opacity: 0.18;
+}
+
+.ns-icon path,
+.ns-icon rect,
+.ns-icon line {
+  stroke: var(--accent);
+}
+
+.ns-title {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--text-dim);
+}
+
+.ns-sub {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #1e2d40;
+}
+
+/* ── Corner brackets ───────────────────────────────── */
+.corner {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.corner::before,
+.corner::after {
+  content: '';
+  position: absolute;
+  background: var(--accent);
+  opacity: 0.65;
+}
+
+.corner::before {
+  height: 1.5px;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.corner::after {
+  width: 1.5px;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.corner.tl { top: 16px; left: 16px; }
+.corner.tr { top: 16px; right: 16px; transform: scaleX(-1); }
+.corner.bl { bottom: 16px; left: 16px; transform: scaleY(-1); }
+.corner.br { bottom: 16px; right: 16px; transform: scale(-1); }
+
+/* ── REC badge ─────────────────────────────────────── */
+.rec-wrap {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  animation: fade-in 0.3s ease-out;
+}
+
+.rec-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 23, 68, 0.12);
+  border: 1px solid var(--red);
+  padding: 4px 13px 4px 10px;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--red);
+}
+
+.rec-blink {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--red);
+  animation: step-blink 1s step-start infinite;
+}
+
+/* ── Camera ID ─────────────────────────────────────── */
+.cam-id {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  z-index: 10;
+  font-size: 9px;
+  letter-spacing: 2.5px;
+  color: var(--accent);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ── Timestamp overlay ─────────────────────────────── */
+.ts-wrap {
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  z-index: 10;
+  text-align: right;
+  pointer-events: none;
+}
+
+.ts-date {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: var(--text-dim);
+}
+
+.ts-time {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #4a6070;
+  margin-top: 2px;
+  font-variant-numeric: tabular-nums;
+}

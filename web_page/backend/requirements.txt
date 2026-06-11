@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+opencv-contrib-python-headless
+python-dotenv
+numpy
+# ROS2 dependencies (install via rosdep / apt, not pip):
+# rclpy
+# sensor_msgs
+# cv_bridge

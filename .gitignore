@@ -1,0 +1,19 @@
+# Python / environments
+rdk_venv/
+venv/
+.env/
+__pycache__/
+*.pyc
+
+# VS Code / local IDE files
+.vscode/
+*.vc.db
+
+# Training outputs / cache
+runs/
+.cache/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
