@@ -676,8 +676,8 @@ Build and upload using PlatformIO or the Arduino framework.
 
 ## Author
 
-**Anees Alwani, Dharmil Trivedi, Raghav Agarwal**
+**Dr. Satishkumar Chavan, Anees Alwani, Dharmil Trivedi, Raghav Agarwal**
 
 Final-year Electronics and Telecommunication Engineering project.
 
-GitHub: [anees786687](https://github.com/anees786687) [Dharmil20](https://github.com/Dharmil20) [GMRicks](https://github.com/GMRicks)
+GitHub: [SatishkumarChavan](https://github.com/SatishkumarChavan) [anees786687](https://github.com/anees786687) [Dharmil20](https://github.com/Dharmil20) [GMRicks](https://github.com/GMRicks)
